@@ -1,5 +1,5 @@
 import unittest
-import hamming
+import src.hamming as hamming
 
 class HammingTest(unittest.TestCase):
     def test_empty_strands(self):
