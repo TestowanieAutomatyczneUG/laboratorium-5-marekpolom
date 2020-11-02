@@ -1,15 +1,60 @@
 def roman(n):
-    if n == 1:
-        return 'I'
-    elif n==2:
-        return 'II'
-    elif n == 3:
-        return 'III'
-    elif n == 4:
-        return 'IV'
-    elif n == 5:
-        return 'V'
-    elif n == 6:
-        return 'VI'
-    elif n == 9:
-        return 'IX'
+    num = {
+        1: 'I',
+        5: 'V',
+        10: 'X',
+        50: 'L',
+    }
+
+    numeral = ''
+
+    x = n
+
+    while x>0:
+        a = 0
+
+        for i in list(num.keys()):
+            if x < i:
+                a = i
+                break
+        
+        if a == 0:
+            a = 1000
+
+
+        b = list(str(a))
+
+        if(int(b[0]) > 1):
+            b[0] = '1'
+        else:
+            b = b[:-1]
+
+        b = int(''.join(b))
+
+
+        c = list(num.keys())
+        index = c.index(a)
+
+        c = c[index-1]
+
+
+        if (x - a) >= 0 :
+
+            x -= a
+
+            numeral += num[a]
+
+        elif (x - (a - b) >= 0):
+
+            x -= (a-b)
+
+            numeral += num[b]
+            numeral += num[a]
+
+        elif (x - c) >= 0:
+
+            x -= c
+
+            numeral += num[c]
+
+    return(numeral)
