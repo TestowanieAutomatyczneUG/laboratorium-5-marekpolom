@@ -21,6 +21,10 @@ class HammingTest(unittest.TestCase):
         with self.assertRaisesWithMessage(ValueError):
             hamming.distance("AATG", "AAA")
 
+    def test_disallow_second_strand_longer(self):
+        with self.assertRaisesWithMessage(ValueError):
+            hamming.distance("ATA", "AGTG")
+
     # Utility functions
     def setUp(self):
         try:
