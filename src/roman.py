@@ -11,3 +11,5 @@ def roman(n):
         return 'V'
     elif n == 6:
         return 'VI'
+    elif n == 9:
+        return 'IX'
