@@ -11,6 +11,9 @@ class HammingTest(unittest.TestCase):
     def test_single_letter_different_strands(self):
         self.assertEqual(hamming.distance("G", "T"), 1)
 
+    def test_long_identical_strands(self):
+        self.assertEqual(hamming.distance("GGACTGAAATCTG", "GGACTGAAATCTG"), 0)
+
     # Utility functions
     def setUp(self):
         try:
