@@ -5,3 +5,5 @@ def roman(n):
         return 'II'
     elif n == 3:
         return 'III'
+    elif n == 4:
+        return 'IV'
