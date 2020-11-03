@@ -11,5 +11,3 @@ class Song():
 
     def close(self):
         self.file.close()
-
-# print(song(1, 12))
