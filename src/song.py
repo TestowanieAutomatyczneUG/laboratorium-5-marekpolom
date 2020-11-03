@@ -9,5 +9,8 @@ class Song():
         else:
             return(self.f[n-1: m])
 
+    def full(self):
+        return(self.f)
+
     def close(self):
         self.file.close()
