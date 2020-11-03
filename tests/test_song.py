@@ -60,6 +60,9 @@ class SongTest(unittest.TestCase):
     def test_value_error_2(self):
         self.assertRaises(Exception, self.song.read, ("."))
 
+    def test_value_error_3(self):
+        self.assertRaises(Exception, self.song.read, ([]))
+
     def test_exception_1(self):
         self.assertRaises(Exception, self.song.read, (0))
 
