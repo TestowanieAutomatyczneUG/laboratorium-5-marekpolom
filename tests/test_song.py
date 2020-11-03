@@ -56,3 +56,6 @@ class SongTest(unittest.TestCase):
 
     def test_value_error_1(self):
         self.assertRaises(Exception, self.song.read, ("d", ""))
+
+    def test_value_error_2(self):
+        self.assertRaises(Exception, self.song.read, ("."))
