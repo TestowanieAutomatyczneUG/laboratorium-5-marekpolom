@@ -9,3 +9,6 @@ class HammingTest(unittest.TestCase):
 
     def test_song_second_day(self):
         self.assertEqual(song(2), "On the second day of Christmas my true love gave to me: two Turtle Doves, and a Partridge in a Pear Tree.")
+
+    def test_song_third_day(self):
+        self.assertEqual(song(3), "On the third day of Christmas my true love gave to me: three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.")
