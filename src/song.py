@@ -4,10 +4,14 @@ class Song():
         self.f = self.file.read().splitlines()
 
     def read(self, n, m=0):
-        if m == 0:
-            return(self.f[n-1])
-        else:
-            return(self.f[n-1: m])
+        try:
+            if int(m) == 0:
+                return(self.f[int(n)-1])
+            else:
+                return(self.f[int(n)-1: int(m)])
+        except:
+            raise Exception('ValueError')
+        
 
     def full(self):
         return(self.f)
