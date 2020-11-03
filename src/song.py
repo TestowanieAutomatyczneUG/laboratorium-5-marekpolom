@@ -11,6 +11,9 @@ class Song():
             if int(m) == 0:
                 return(self.f[int(n)-1])
             else:
+                if m-n <= 0:
+                    raise Exception("First value can't be higher than the second")
+
                 return(self.f[int(n)-1: int(m)])
         except:
             raise Exception('ValueError')
