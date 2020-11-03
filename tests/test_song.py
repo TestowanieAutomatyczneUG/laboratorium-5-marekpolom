@@ -56,6 +56,9 @@ class SongTest(unittest.TestCase):
 
     def test_song_str_num(self):
         self.assertEqual(self.song.read('1'), "On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.")
+
+    def test_song_str_num_multi(self):
+        self.assertEqual(self.song.read('4', '5'), ['On the fourth day of Christmas my true love gave to me: four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.', 'On the fifth day of Christmas my true love gave to me: five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.'])
     
     def test_value_error_1(self):
         self.assertRaises(Exception, self.song.read, ("d", ""))
