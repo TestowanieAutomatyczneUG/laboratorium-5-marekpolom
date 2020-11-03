@@ -18,5 +18,8 @@ class HammingTest(unittest.TestCase):
     
     def test_song_fifth_day(self):
         self.assertEqual(song(5), "On the fifth day of Christmas my true love gave to me: five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.")
+    
+    def test_song_sixth_day(self):
+        self.assertEqual(song(6), "On the sixth day of Christmas my true love gave to me: six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.")
 
     
