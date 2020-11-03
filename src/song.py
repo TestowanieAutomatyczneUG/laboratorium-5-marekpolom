@@ -5,13 +5,13 @@ class Song():
 
     def read(self, n, m=0):
         try:
-            if n <= 0 or m < 0:
+            if int(n) <= 0 or int(m) < 0:
                 raise Exception("Values can't be lower than 1")
 
             if int(m) == 0:
                 return(self.f[int(n)-1])
             else:
-                if m-n <= 0:
+                if int(m)-int(n) <= 0:
                     raise Exception("First value can't be higher than the second")
 
                 return(self.f[int(n)-1: int(m)])
