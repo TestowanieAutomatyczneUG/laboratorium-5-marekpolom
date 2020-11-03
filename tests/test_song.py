@@ -74,3 +74,6 @@ class SongTest(unittest.TestCase):
 
     def test_exception_2(self):
         self.assertRaises(Exception, self.song.read, (2, 1))
+
+    def test_negative(self):
+        self.assertRaises(Exception, self.song.read, (-2))
